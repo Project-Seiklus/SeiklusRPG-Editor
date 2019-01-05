@@ -1,6 +1,7 @@
 {
     "include":[
-        "src/**/*"
+        "src/**/*",
+        "lib/**/*.d.ts"
     ],
     "exclude":[
         "node_modules"
