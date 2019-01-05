@@ -20,7 +20,7 @@
   },
   "homepage": "https://github.com/Project-Seiklus/SeiklusRPG-Editor#readme",
   "scripts": {
-    "build": "tsc -p tsconfig.json",
+    "build": "webpack",
     "start": "electron dist/main.js"
   },
   "devDependencies": {
