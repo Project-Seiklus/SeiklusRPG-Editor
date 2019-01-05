@@ -19,10 +19,16 @@
     "url": "https://github.com/Project-Seiklus/SeiklusRPG-Editor/issues"
   },
   "homepage": "https://github.com/Project-Seiklus/SeiklusRPG-Editor#readme",
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "start": "electron dist/main.js"
+  },
   "devDependencies": {
     "electron": "^4.0.1"
   },
   "dependencies": {
-    "phaser": "^3.15.1"
+    "phaser": "^3.15.1",
+    "electron": "^4.0.1",
+    "typescript": "^3.2.2"
   }
 }
