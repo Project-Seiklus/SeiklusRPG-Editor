@@ -25,7 +25,12 @@
   },
   "devDependencies": {
     "electron": "^4.0.1",
-    "typescript": "^3.2.2"
+    "scss-loader": "0.0.1",
+    "ts-loader": "^5.3.2",
+    "typescript": "^3.2.2",
+    "vue-loader": "^15.5.0",
+    "webpack": "^4.28.3",
+    "webpack-cli": "^3.2.0"
   },
   "dependencies": {
     "phaser": "^3.15.1"
