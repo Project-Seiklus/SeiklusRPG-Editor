@@ -2,7 +2,7 @@ const path = require('path');
 
 module.exports = {
     target: 'electron-main',
-    entry: './src/renderer/main.ts',
+    entry: './src/renderer/app.ts',
     output: {
         path: path.resolve(__dirname, './dist'),
         publicPath: '/dist/',
