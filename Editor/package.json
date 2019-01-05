@@ -21,6 +21,7 @@
   "homepage": "https://github.com/Project-Seiklus/SeiklusRPG-Editor#readme",
   "scripts": {
     "build": "webpack",
+    "build-renderer": "webpack --config webpack.renderer.config.js",
     "start": "electron dist/main.js"
   },
   "devDependencies": {
