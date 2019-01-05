@@ -1,11 +1,16 @@
 const path = require('path');
 
 module.exports = {
+    target: 'electron-main',
     entry: './src/main.ts',
     output: {
         path: path.resolve(__dirname, './dist'),
         publicPath: '/dist/',
         filename: 'main.js'
+    },
+    node: {
+        __dirname: false,
+        __filename: false
     },
     module: {
         rules: [
