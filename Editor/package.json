@@ -24,10 +24,11 @@
     "start": "electron dist/main.js"
   },
   "devDependencies": {
+    "@types/pixi.js": "^4.8.6",
     "electron": "^4.0.1",
     "typescript": "^3.2.2"
   },
   "dependencies": {
-    "phaser": "^3.15.1"
+    "pixi.js": "^4.8.4"
   }
 }
