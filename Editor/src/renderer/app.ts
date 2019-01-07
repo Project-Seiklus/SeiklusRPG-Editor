@@ -1,9 +1,9 @@
 import Vue from 'vue';
-import Vuetify from 'vuetify';
+import VueMaterial from 'vue-material';
 
-import 'vuetify/dist/vuetify.min.css';
+import 'vue-material/dist/vue-material.min.css';
 
-Vue.use(Vuetify);
+Vue.use(VueMaterial);
 
 let app = new Vue({
     el: '#vue-root'
