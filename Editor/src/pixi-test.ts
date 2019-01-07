@@ -1,7 +1,7 @@
 import * as PIXI from "pixi.js";
 
 export class Test {
-    static View : PIXI.WebGLRenderer;
+    static Renderer : PIXI.WebGLRenderer;
     static Stage : PIXI.Container;
     
     static Shape : PIXI.Graphics;
@@ -13,18 +13,16 @@ export class Test {
         let option = {
             backgroundColor: 0x0099ff,
             resolution: devicePixelRatio,
-            antialias: true,
-            width:1280,
-            height:720
+            antialias: true
         };
         
-        Test.View = new PIXI.WebGLRenderer(option);
+        Test.Renderer = new PIXI.WebGLRenderer(option);
         
-        Test.View.autoResize = true;
-        Test.View.view.style.width  = "100%";
-        Test.View.view.style.height = "100vh";
+        Test.Renderer.autoResize = true;
+        Test.Renderer.view.style.width  = "100%";
+        Test.Renderer.view.style.height = "100vh";
         
-        document.body.appendChild(Test.View.view);
+        document.body.appendChild(Test.Renderer.view);
         
         Test.Stage = new PIXI.Container();
         
@@ -39,14 +37,22 @@ export class Test {
         Test.Shape.x = 100;
         Test.Shape.y = 100;
         
-        Test.View.render(Test.Stage);
+        Test.UpdateScreenSize(window.innerWidth, window.innerHeight);
     }
     
+    static width:number;
+    static height:number;
+    
     public static OnResize():void {
-        if (Test.View == null)
+        Test.UpdateScreenSize(window.innerWidth, window.innerHeight);
+    }
+    
+    static UpdateScreenSize(w:number, h:number):void {
+        if (Test.Renderer == null)
             return;
         
-        //TODO : PIXI 렌더러의 크기가 창 크기에 맞게 동적으로 바뀌어야 함.
-        //       창 크기에 맞게 똑같이 커지고 작아지는 것을 볼 수 있음.
+        Test.Renderer.resize(w, h);
+        
+        Test.Renderer.render(Test.Stage);
     }
 }
