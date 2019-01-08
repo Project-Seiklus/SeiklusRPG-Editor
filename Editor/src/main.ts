@@ -8,7 +8,7 @@ function createWindow() {
   mainWindow = new BrowserWindow({
     height: 600,
     width: 800,
-    webPreferences: {nodeIntegration: false}
+    webPreferences: {nodeIntegration: true} // 이거 false로 하는게 보안상 좋다는데 일단은 쓰니까요 true 해둘게요
   });
 
   // and load the index.html of the app.
