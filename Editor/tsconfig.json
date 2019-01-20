@@ -1,7 +1,6 @@
 {
     "include":[
-        "src/**/*",
-        "lib/**/*.d.ts"
+        "src/**/*"
     ],
     "exclude":[
         "node_modules"
@@ -9,6 +8,7 @@
     "compilerOptions":{
         "target":"ES5",
         "module":"commonjs",
+        "esModuleInterop": true,
         //"strict": true,
 
         "locale":"ko",

@@ -25,10 +25,12 @@
   },
   "devDependencies": {
     "@types/pixi.js": "^4.8.6",
+    "@vue/devtools": "^4.1.5",
     "electron": "^4.0.1",
     "typescript": "^3.2.2"
   },
   "dependencies": {
-    "pixi.js": "^4.8.4"
+    "pixi.js": "^4.8.4",
+    "vue": "^2.5.22"
   }
 }

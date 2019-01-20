@@ -2,10 +2,11 @@
     "version": "2.0.0",
     "compounds": [
         {
-            "name": "Electron: All",
+            "name": "Build & Debug",
             "configurations": [
                 "Electron: Main",
-                "Electron: Renderer"
+                "Electron: Renderer",
+                "Vue Debugger"
             ]
         }
     ],
@@ -24,7 +25,6 @@
                 "--enable-logging"
             ],
             "env": {},
-            "sourceMaps": true,
             "outFiles": [
                 "${workspaceRoot}/dist/**/*.js"
             ],
@@ -38,7 +38,17 @@
             "request": "attach",
             "port": 9223,
             "webRoot": "${workspaceFolder}",
-            "timeout": 30000
+            "timeout": 30000,
+            "sourceMaps": true,
+            "sourceMapPathOverrides": {
+              "*": "${webRoot}/*"
+            }
+        },
+        {
+            "name": "Vue Debugger",
+            "type": "node",
+            "request": "launch",
+            "runtimeExecutable": "vue-devtools"
         }
     ]
 }
