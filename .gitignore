@@ -1,2 +1,5 @@
 node_modules
 dist
+
+# InteliJ 계열 IDE의 설정 파일
+.idea/
