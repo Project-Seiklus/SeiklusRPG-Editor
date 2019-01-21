@@ -11,7 +11,7 @@ function createWindow() {
   });
 
   // and load the index.html of the app.
-  mainWindow.loadFile(path.join(__dirname, "../vue-test.html"));
+  mainWindow.loadFile(path.join(__dirname, "../vue-material-test.html"));
 
   // Open the DevTools.
   //TODO : 시작하자마자 디버거를 키게 되면 vscode가 디버그 대상을 디버거로 잡는 현상이 일어난다.

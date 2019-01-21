@@ -21,6 +21,10 @@
         "emitBOM": false,
         "removeComments": true,
 
-        "sourceMap": true
+        "sourceMap": true,
+        
+        "plugins": [
+            { "name": "typescript-plugin-css-modules" }
+        ]
     }
 }

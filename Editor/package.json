@@ -27,10 +27,12 @@
     "@types/pixi.js": "^4.8.6",
     "@vue/devtools": "^4.1.5",
     "electron": "^4.0.1",
-    "typescript": "^3.2.2"
+    "typescript": "^3.2.2",
+    "typescript-plugin-css-modules": "^1.0.5"
   },
   "dependencies": {
     "pixi.js": "^4.8.4",
-    "vue": "^2.5.22"
+    "vue": "^2.5.22",
+    "vue-material": "^1.0.0-beta-10.2"
   }
 }
