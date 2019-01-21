@@ -1,13 +1,26 @@
-import Vue from 'vue';
+import Vue from 'vue/dist/vue.common';
 
-export var app = new Vue({
-    el: '#app',
-    render: function(createElement) {
-      return createElement('div', {}, this.message)
-    },
+function yyyyMMddHHmmss(date:Date):string {
+    function pad2(n) {  // always returns a string
+        return (n < 10 ? '0' : '') + n;
+    }
+
+    return `${date.getFullYear()}년 ${pad2(date.getMonth() + 1)}월 ${pad2(date.getDate())}일 `
+         + `${pad2(date.getHours())}시 ${pad2(date.getMinutes())}분 ${pad2(date.getSeconds())}초`;
+}
+
+export var DataBind = new Vue({
+    el: "#data-bind",
     data: {
-        message: 'Hello, Vue!'
+        Message: "Hello, Vue!",
+        Time: "(시간)"
     }
 });
 
-//하지만 이게 어디에서 동작하는 지 확인할 수 없었다고 한다...
+function UpdateDate(target):void {
+    target.Time = `${yyyyMMddHHmmss(new Date())}`;
+}
+
+setInterval(UpdateDate, 1000, DataBind);
+
+UpdateDate(DataBind);

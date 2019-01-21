@@ -10,6 +10,13 @@
             overflow: hidden;
             
             color: black;
+            
+            font-family: 'SpoqaHanSans', 'NanumGhotic', 'MalgunGhotic', 'AppleGothic', sans-serif;
+        }
+        
+        #data-bind div {
+            display: inline-block;
+            vertical-align: middle;
         }
     </style>
     
@@ -17,14 +24,18 @@
   </head>
   <body>
       
-      이 사이 -&gt;
-        
-      <div id="app">
-          {{ message }}
+      <div id="data-bind" style="
+          text-align: center;
+          vertical-align: middle;
+          height: 100vh;
+      ">
+          <div style="height:100%;">
+          </div><div>
+            Vue는 말했어요 : <strong>{{ Message }}</strong><br>
+            현재 시간은 <strong>{{ Time }}</strong> 입니다.
+          </div>
       </div>
       
-      &lt;-에 `app` 있음!!1!
-      
-      <script> require("./dist/vue-test"); console.log("왜 앉되!!!!!!!"); </script>
+      <script> require("./dist/vue-test"); </script>
   </body>
 </html>
