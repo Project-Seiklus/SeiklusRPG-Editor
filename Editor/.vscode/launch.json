@@ -48,7 +48,9 @@
             "name": "Vue Debugger",
             "type": "node",
             "request": "launch",
-            "runtimeExecutable": "vue-devtools"
+            "runtimeArgs": [
+                "${workspaceRoot}/node_modules/@vue/devtools/bin.js"
+            ]
         }
     ]
 }
