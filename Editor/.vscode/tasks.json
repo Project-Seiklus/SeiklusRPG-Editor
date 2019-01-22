@@ -2,16 +2,30 @@
     "version": "2.0.0",
     "tasks": [
         {
-            "label": "TypeScript compile",
-            "type": "typescript",
-            "tsconfig": "tsconfig.json",
-            "problemMatcher": [
-                "$tsc"
+            "label": "Compile all",
+            "dependsOn": [
+                "TypeScript compile",
+                "Sass compile"
             ],
             "group": {
                 "kind": "build",
                 "isDefault": true
             }
+        },
+        {
+            "label": "TypeScript compile",
+            "type": "typescript",
+            "tsconfig": "tsconfig.json",
+            "problemMatcher": [
+                "$tsc"
+            ]
+        },
+        {
+            "label": "Sass compile",
+            "type": "shell",
+            "command": [
+                "node ./node_modules/node-sass/bin/node-sass assets/scss -o assets/css"
+            ]
         }
     ]
 }

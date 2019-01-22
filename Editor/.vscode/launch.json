@@ -30,7 +30,7 @@
             ],
             "internalConsoleOptions": "openOnSessionStart",
             "console": "integratedTerminal",
-            "preLaunchTask": "TypeScript compile"
+            "preLaunchTask": "Compile all"
         },
         {
             "name": "Electron: Renderer",
