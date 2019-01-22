@@ -5,7 +5,7 @@ export enum RootType {
     VueMaterial
 }
 
-export default function loader(src:string, rootType:RootType = RootType.Assets): HTMLLinkElement {
+export function import_css(src:string, rootType:RootType = RootType.Assets): HTMLLinkElement {
     
     let element:HTMLLinkElement = document.createElement('link');
     

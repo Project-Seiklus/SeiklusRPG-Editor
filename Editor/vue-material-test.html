@@ -25,7 +25,13 @@
         </div>
     
         <script>
-            require('./dist/renderer/vue-material-test');
+            require('./dist/renderer/vue-material-test')
+               .default();
+                
+            document.body.style.display = 'none';
+            document.body.onload = () => {
+                document.body.style.display = '';
+            }
         </script>
     </body>
 </html>
