@@ -24,3 +24,8 @@ function UpdateDate(target):void {
 setInterval(UpdateDate, 1000, DataBind);
 
 UpdateDate(DataBind);
+
+var InputInteraction = new Vue({
+    el: "#input-test",
+    data: { value: "" }
+});

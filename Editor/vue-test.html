@@ -27,7 +27,7 @@
       <div id="data-bind" style="
           text-align: center;
           vertical-align: middle;
-          height: 100vh;
+          height: 50vh;
       ">
           <div style="height:100%;">
           </div><div>
@@ -35,6 +35,12 @@
             현재 시간은 <strong>{{ Time }}</strong> 입니다.
           </div>
       </div>
+      
+      
+      <div id="input-test" style="text-align: center;">
+        <input type="text" v-model="value" />
+        <p>{{ value }}</p>
+    </div>
       
       <script> require("./dist/renderer/vue-test"); </script>
   </body>

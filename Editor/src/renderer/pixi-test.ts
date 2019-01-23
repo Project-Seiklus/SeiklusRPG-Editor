@@ -8,7 +8,7 @@ export class Test {
     
     public static Init():void {
         
-        window.onresize = Test.OnResize;
+        window.onresize = this.OnResize;
         
         let option = {
             backgroundColor: 0x0099ff,
@@ -16,43 +16,43 @@ export class Test {
             antialias: true
         };
         
-        Test.Renderer = new PIXI.WebGLRenderer(option);
+        this.Renderer = new PIXI.WebGLRenderer(option);
         
-        Test.Renderer.autoResize = true;
-        Test.Renderer.view.style.width  = "100%";
-        Test.Renderer.view.style.height = "100vh";
+        this.Renderer.autoResize = true;
+        this.Renderer.view.style.width  = "100%";
+        this.Renderer.view.style.height = "100vh";
         
-        document.body.appendChild(Test.Renderer.view);
+        document.body.appendChild(this.Renderer.view);
         
-        Test.Stage = new PIXI.Container();
+        this.Stage = new PIXI.Container();
         
-        Test.Shape = new PIXI.Graphics();
+        this.Shape = new PIXI.Graphics();
         
-        Test.Shape.beginFill(0xffffff);
-        Test.Shape.drawRect(0, 0, 100, 100);
-        Test.Shape.endFill();
+        this.Shape.beginFill(0xffffff);
+        this.Shape.drawRect(0, 0, 100, 100);
+        this.Shape.endFill();
         
-        Test.Stage.addChild(Test.Shape);
+        this.Stage.addChild(this.Shape);
         
-        Test.Shape.x = 100;
-        Test.Shape.y = 100;
+        this.Shape.x = 100;
+        this.Shape.y = 100;
         
-        Test.UpdateScreenSize(window.innerWidth, window.innerHeight);
+        this.UpdateScreenSize(window.innerWidth, window.innerHeight);
     }
     
     static width:number;
     static height:number;
     
     public static OnResize():void {
-        Test.UpdateScreenSize(window.innerWidth, window.innerHeight);
+        this.UpdateScreenSize(window.innerWidth, window.innerHeight);
     }
     
     static UpdateScreenSize(w:number, h:number):void {
-        if (Test.Renderer == null)
+        if (this.Renderer == null)
             return;
         
-        Test.Renderer.resize(w, h);
+        this.Renderer.resize(w, h);
         
-        Test.Renderer.render(Test.Stage);
+        this.Renderer.render(this.Stage);
     }
 }
