@@ -27,5 +27,3 @@ export default function(rendererPath:string) {
     
     document.body.onload = OnLoad;
 }
-
-//이렇게 했거든요.
