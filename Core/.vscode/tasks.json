@@ -1,19 +1,50 @@
 {
-    // See https://go.microsoft.com/fwlink/?LinkId=733558
-    // for the documentation about the tasks.json format
     "version": "2.0.0",
     "tasks": [
         {
-            "label": "build",
+            "label": "build-all",
+            "dependsOn": [
+                "webpackbuild",
+                //"tsbuild",
+                "aspbuild"
+            ]
+        },
+        {
+            "label": "tsbuild-runhost",
+            "dependsOn": [
+                "tsbuild",
+                "asprun"
+            ]
+        },
+        {
+            "label": "tsbuild",
             "type": "typescript",
             "tsconfig": "tsconfig.json",
             "problemMatcher": [
                 "$tsc"
+            ]
+        },
+        {
+            "label": "webpackbuild",
+            "type": "shell",
+            "command":[
+                "./node_modules/.bin/webpack --config webpack.config.js"
+            ]
+        },
+        {
+            "label": "aspbuild",
+            "command": "dotnet",
+            "type": "process",
+            "args": [
+                "build",
+                "${workspaceFolder}/TestHost.csproj"
             ],
-            "group": {
-                "kind": "build",
-                "isDefault": true
-            }
+            "problemMatcher": "$msCompile"
+        },
+        {
+            "label": "asprun",
+            "type": "shell",
+            "command": "dotnet run"
         }
     ]
 }

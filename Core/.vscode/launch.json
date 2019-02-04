@@ -1,16 +1,58 @@
 {
-    // IntelliSense를 사용하여 가능한 특성에 대해 알아보세요.
-    // 기존 특성에 대한 설명을 보려면 가리킵니다.
-    // 자세한 내용을 보려면 https://go.microsoft.com/fwlink/?linkid=830387을(를) 방문하세요.
-    "version": "0.2.0",
-    "configurations": [
+   // Use IntelliSense to find out which attributes exist for C# debugging
+   // Use hover for the description of the existing attributes
+   // For further information visit https://github.com/OmniSharp/omnisharp-vscode/blob/master/debugger-launchjson.md
+   "version": "0.2.0",
+   "compounds": [
+       {
+           "name": "Build & Debug",
+           "configurations": [
+               ".NET Core Launch (web)",
+               "Launch Chrome"
+           ]
+       }
+   ],
+   "configurations": [
         {
+            
             "type": "chrome",
             "request": "launch",
-            "name": "Launch Chrome against localhost",
-            "url": "${workspaceFolder}/wwwroot/index.html",
-            "webRoot": "${workspaceFolder}",
-            "preLaunchTask": "build"
+            "name": "Launch Chrome",
+            "url": "http://localhost:5000",
+            "webRoot": "${workspaceRoot}/wwwroot/src",
+            "disableNetworkCache": true,
+            "sourceMaps": true,
+            "sourceMapPathOverrides": {
+              "webpack:///./~/*": "${webRoot}/node_modules/*",
+              "webpack:///./*":   "${webRoot}/wwwroot/src/*",
+              "webpack:///../*":  "${webRoot}/wwwroot/src/*",
+              "webpack:///*":     "*"
+            },
+            "preLaunchTask": "build-all"
+        },
+        {
+            "name": ".NET Core Launch (web)",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "build-all",
+            // If you have changed target frameworks, make sure to update the program path.
+            "program": "${workspaceFolder}/bin/Debug/netcoreapp2.1/TestHost.dll",
+            "args": [],
+            "cwd": "${workspaceFolder}",
+            "stopAtEntry": false,
+            "internalConsoleOptions": "openOnSessionStart",
+            "env": {
+                "ASPNETCORE_ENVIRONMENT": "Development"
+            },
+            "sourceFileMap": {
+                "/Views": "${workspaceFolder}/Views"
+            }
+        },
+        {
+            "name": ".NET Core Attach",
+            "type": "coreclr",
+            "request": "attach",
+            "processId": "${command:pickProcess}"
         }
-    ]
+    ,]
 }

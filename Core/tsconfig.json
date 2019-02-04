@@ -1,14 +1,14 @@
 {
     "include":[
-        "src/**/*",
+        "wwwroot/src/**/*",
         "lib"
     ],
-    "exclude":[
+    "exclude": [
         "node_modules"
     ],
     "compilerOptions":{
         "target":"ES5",
-        "module":"system",
+        "module":"amd",
         "esModuleInterop": true,
         
         //"strict": true,
@@ -16,17 +16,14 @@
         "locale":"ko",
         "pretty":true,
 
-        "rootDir":"src",
-        "outDir":"dist",
+        "rootDir": "wwwroot/src",
+        "outDir": "dist",
+        "baseUrl": "wwwroot/src",
 
         "charset": "utf8",
         "emitBOM": false,
         "removeComments": true,
 
-        "sourceMap": true,
-        
-        "plugins": [
-            { "name": "typescript-plugin-css-modules" }
-        ]
+        "sourceMap": true
     }
 }

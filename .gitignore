@@ -3,3 +3,37 @@ dist
 
 # InteliJ 계열 IDE의 설정 파일
 .idea/
+
+# 웹팩에서 빌드된 결과물
+seiklus-core.js
+seiklus-core.js.map
+
+# ASP.NET Core 빌드 파일들
+*.swp
+*.*~
+project.lock.json
+.DS_Store
+*.pyc
+nupkg/
+
+# User-specific files
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Build results
+[Dd]ebug/
+[Dd]ebugPublic/
+[Rr]elease/
+[Rr]eleases/
+x64/
+x86/
+build/
+bld/
+[Bb]in/
+[Oo]bj/
+[Oo]ut/
+msbuild.log
+msbuild.err
+msbuild.wrn
