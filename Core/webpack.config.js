@@ -1,6 +1,7 @@
 const path = require('path');
 
 module.exports = {
+    context: path.resolve(__dirname, 'wwwroot', 'src'),
     entry: path.join(__dirname, 'wwwroot', 'src', '/Main.ts'),
     output: {
         filename: 'seiklus-core.js',
@@ -19,5 +20,5 @@ module.exports = {
     resolve: {
         extensions: [".tsx", ".ts", ".js"]
     },
-    devtool: 'source-map'
+    devtool: 'eval-source-map'
 };

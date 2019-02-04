@@ -19,7 +19,7 @@
             "request": "launch",
             "name": "Launch Chrome",
             "url": "http://localhost:5000",
-            "webRoot": "${workspaceRoot}/wwwroot/src",
+            "webRoot": "${workspaceRoot}",
             "disableNetworkCache": true,
             "sourceMaps": true,
             "sourceMapPathOverrides": {
