@@ -1,44 +1,34 @@
-//import * as Phaser from 'phaser';
-//
-//export namespace SeiklusCore
-//{
-//    export class Main {
-//        
-//        private static rooturl: string;
-//        
-//        public static Launch(rooturl: string): void
-//        {
-//            Main.rooturl = rooturl;
-//            
-//            console.log(`Hello, ${this.Test()}`);
-//            
-//            //new Phaser.Game({
-//            //    type: Phaser.AUTO,
-//            //    width: 800,
-//            //    height: 600,
-//            //    
-//            //    physics: {
-//            //        default: 'arcade'
-//            //    }
-//            //});
-//        }
-//        
-//        public static Test():string
-//        {
-//            return "Creta!";
-//        }
-//    }
-//    
-//    Main.Launch(window.location.href);
-//}
+import * as Phaser from 'phaser';
 
-import { Test2 } from './Test2';
-
-export class Test {
-    static Hello(): void
-    {
-        Test2.Run();
+export namespace SeiklusCore
+{
+    export class Main {
+        
+        private static RootUrl: string;
+        
+        private static Application: Phaser.Game;
+        
+        public static Launch(url: string): void
+        {
+            Main.RootUrl = url;
+            
+            //현재 실행하고 있는 프로그램 종료
+            if (Main.Application != null) {
+                Main.Application.destroy(true);
+                Main.Application = null;
+            }
+            
+            Main.Application = new Phaser.Game({
+                type: Phaser.AUTO,
+                width: 800,
+                height: 600,
+                
+                physics: {
+                    default: 'arcade'
+                }
+            });
+        }
     }
+    
+    Main.Launch(window.location.href);
 }
-
-Test.Hello();
