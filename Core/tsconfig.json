@@ -1,0 +1,32 @@
+{
+    "include":[
+        "src/**/*",
+        "lib"
+    ],
+    "exclude":[
+        "node_modules"
+    ],
+    "compilerOptions":{
+        "target":"ES5",
+        "module":"system",
+        "esModuleInterop": true,
+        
+        //"strict": true,
+
+        "locale":"ko",
+        "pretty":true,
+
+        "rootDir":"src",
+        "outDir":"dist",
+
+        "charset": "utf8",
+        "emitBOM": false,
+        "removeComments": true,
+
+        "sourceMap": true,
+        
+        "plugins": [
+            { "name": "typescript-plugin-css-modules" }
+        ]
+    }
+}
