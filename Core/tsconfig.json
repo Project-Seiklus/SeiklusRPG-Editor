@@ -1,6 +1,6 @@
 {
     "include":[
-        "wwwroot/src/**/*",
+        "wwwroot/Seiklus/**/*",
         "lib"
     ],
     "exclude": [
@@ -16,9 +16,9 @@
         "locale":"ko",
         "pretty":true,
 
-        "rootDir": "wwwroot/src",
+        "rootDir": "wwwroot/Seiklus",
         "outDir": "dist",
-        "baseUrl": "wwwroot/src",
+        "baseUrl": "wwwroot/Seiklus",
 
         "charset": "utf8",
         "emitBOM": false,

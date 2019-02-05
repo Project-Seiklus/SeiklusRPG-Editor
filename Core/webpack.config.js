@@ -1,8 +1,8 @@
 const path = require('path');
 
 module.exports = {
-    context: path.resolve(__dirname, 'wwwroot', 'src'),
-    entry: path.join(__dirname, 'wwwroot', 'src', '/Main.ts'),
+    context: path.resolve(__dirname, 'wwwroot', 'Seiklus'),
+    entry: path.join(__dirname, 'wwwroot', 'Seiklus', '/Main.ts'),
     output: {
         filename: 'seiklus-core.js',
         path: path.join(__dirname, 'wwwroot', 'js')
