@@ -45,7 +45,7 @@ export namespace SeiklusCore
          */
         private static OnPreload() :void
         {
-            
+            //TODO : data에서 먼저 게임 정보를 불러온다.
         }
         
         /**
