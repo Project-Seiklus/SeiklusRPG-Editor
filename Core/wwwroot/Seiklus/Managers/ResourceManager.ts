@@ -1,7 +1,4 @@
-export namespace SeiklusCore.Managers
+export class ResourceManager
 {
-    export class ResourceManager
-    {
-        
-    }
+    
 }

@@ -1,4 +1,5 @@
 import * as Phaser from 'phaser';
+import { ResourceManager } from './ResourceManager';
 
 export class GameManager
 {
@@ -12,26 +13,27 @@ export class GameManager
     {
         this.SetupUrl(url);
         
-        if (this.Application != null) {
-            this.Application.destroy(true);
-            this.Application = null;
-        }
+        ResourceManager
         
-        this.Application = new Phaser.Game({
-            type: Phaser.AUTO,
-            width: 800,
-            height: 600,
-            
-            physics: {
-                default: 'arcade'
-            },
-            
-            scene: {
-                preload: this.OnPreload,
-                create:  this.OnApplicationReady
-            }
-            
-        });
+        //if (this.Application != null) {
+        //    this.Application.destroy(true);
+        //    this.Application = null;
+        //}
+        //
+        //this.Application = new Phaser.Game({
+        //    type: Phaser.AUTO,
+        //    width: 800,
+        //    height: 600,
+        //    
+        //    physics: {
+        //        default: 'arcade'
+        //    },
+        //    
+        //    scene: {
+        //        preload: this.OnPreload,
+        //        create:  this.OnApplicationReady
+        //    }
+        //});
     }
     
     private static SetupUrl(url: string): void {
